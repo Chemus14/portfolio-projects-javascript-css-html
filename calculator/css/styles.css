@@ -34,8 +34,9 @@
     width: 30px;
     border: 2px solid var(--color-primary-400);
     text-align: center;
-    font-weight: 900;
+    font-weight: bolder;
     transition: display 2s ease;
+    font-size: 1.2rem;
   }
 
   .result{
@@ -108,13 +109,12 @@
     margin-left: 2px;
     margin-top: 2px;
     font-size: 1.5rem;
-    background-color: var(--color-secondary-300);
-    border: var(--color-secondary-100) 2px solid;
+    background-color: var(--color-secondary-300) !important;
+    border: var(--color-secondary-100) 2px solid !important;
     border-radius: 6px;
     transition: background-color 1s ease;
-
         &:hover{
-            background-color: var(--color-secondary-400);
+            background-color: var(--color-secondary-400) !important;
             color: var(--black);
             border: var(--color-primary-400) 2px solid;
         }

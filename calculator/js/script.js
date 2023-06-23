@@ -18,6 +18,12 @@ buttons.forEach(button => {
         }
         decimalUsed = true;
       }
+      // Add leading zero if value starts with a decimal point
+      if (currV === '.') {
+        if (op === '') decimalUsed = true;
+        currV = '0' + currV;
+      }
+
       currV += button.textContent;
       result.value = currV;
     }
@@ -39,10 +45,12 @@ buttons.forEach(button => {
       initialV !== '' &&
       currV !== ''
     ) {
+      console.log(initialV + currV);
       const resultOp = operations(op, Number(initialV), Number(currV));
 
       result.value = resultOp;
       initialV = resultOp;
+      currV = '';
       op = '';
     }
 
@@ -52,6 +60,7 @@ buttons.forEach(button => {
       decimalUsed = false;
       currV = '';
       op = '';
+      operator.style.display = 'none';
     }
   });
 });
