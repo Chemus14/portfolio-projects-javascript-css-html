@@ -49,6 +49,7 @@ buttons.forEach(button => {
     if (button.textContent === 'C') {
       result.value = 0;
       initialV = '';
+      decimalUsed = false;
       currV = '';
       op = '';
     }
