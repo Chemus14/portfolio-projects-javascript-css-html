@@ -1,0 +1,93 @@
+:root {
+    --color-primary-100: #4E98A9;
+    --color-primary-200: #12468D;
+    --color-primary-300: #2C4770;
+    --color-primary-400: rgba(177, 189, 235, 0.2);
+    --color-secondary-100: #795DB8;
+    --color-secondary-200: #9E85D6;
+    --color-secondary-300: #C2B0EB;
+    --color-secondary-400: #E4DBF9;
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #53504B;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ct-todolist {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary-400);
+    padding: 1rem;
+  }
+  
+  .ct-input-task {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: 15px;
+  }
+  .ct-button{
+    width: 19%;
+    border: solid 3px var(--color-secondary-300);
+    border-radius: 12px;
+    transition: border 1s ease, background-color 1s ease;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-primary-100);
+    text-transform: uppercase;
+    padding: 0.5rem;
+  }
+
+  .ct-button:hover{
+    background-color: var(--color-secondary-200);
+    border: solid 3px var(--color-secondary-400);
+    color: var(--color-secondary-300);
+    cursor: pointer;
+  }
+  
+  .ct-task {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 20px;
+    border: 2px inset var(--color-secondary-300);
+    margin-top: 10px;
+    padding: 0.5rem;
+    box-shadow: var(--color-primary-200) 1px 1px 5px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .show {
+    opacity: 1;
+  }
+  
+  .ct-close-icon {
+    display: block;
+    font-size: 20px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    cursor: pointer;
+  }
+  
