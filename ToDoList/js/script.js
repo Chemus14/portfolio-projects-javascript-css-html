@@ -63,8 +63,11 @@ if (localStorageTask) {
 
 // Event listener for the add button
 addBtn.addEventListener('click', () => {
-  // If there are tasks in local storage and the current tasks array is empty, use the tasks from local storage
-  if (localStorageTask && tasks == '') tasks = localStorageTask;
+  //If input is empty, dont do anything
+  if (inputText.value === '') return;
+  if (localStorageTask && tasks == '')
+    // If there are tasks in local storage and the current tasks array is empty, use the tasks from local storage
+    tasks = localStorageTask;
 
   // Get the new task from the input field
   task = inputText.value;
